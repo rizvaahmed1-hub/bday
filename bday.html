@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elegant Birthday Card</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff0f5;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px;
+    text-align:center;
+    background:rgba(255,255,255,0.4);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+nav a{
+    text-decoration:none;
+    color:#c2185b;
+    margin:0 15px;
+    font-weight:600;
+    font-size:17px;
+}
+
+/* SECTIONS */
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px 50px;
+    position:relative;
+}
+
+/* FLOATING ITEMS */
+
+.floating{
+    position:absolute;
+    font-size:90px;
+    animation:float 6s ease-in-out infinite;
+    opacity:0.9;
+}
+
+/* CAT */
+
+.f1{ top:30px; left:20px; }
+
+/* BALLOON */
+
+.f2{
+    bottom:40px;
+    right:20px;
+    animation-delay:2s;
+}
+
+/* CAKE */
+
+.f3{
+    top:120px;
+    right:80px;
+    font-size:70px;
+    animation-delay:1s;
+}
+
+@keyframes float{
+    0%{ transform:translateY(0px) rotate(0deg); }
+    50%{ transform:translateY(-20px) rotate(5deg); }
+    100%{ transform:translateY(0px) rotate(0deg); }
+}
+
+/* CARD */
+
+.card{
+    width:95%;
+    max-width:1050px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(12px);
+    border-radius:35px;
+    padding:50px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* PAGE 1 */
+
+.page1{
+    background:linear-gradient(135deg,#ffd6e7,#ffeaf4,#fff5fa);
+}
+
+.title{
+    font-family:'Dancing Script',cursive;
+    font-size:90px;
+    color:#c2185b;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#6d214f;
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+.main-photo{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.main-photo img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:30px;
+    border:8px solid white;
+    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* PAGE 2 */
+
+.page2{
+    background:linear-gradient(135deg,#ffe4ee,#fff5fa);
+}
+
+.heading{
+    font-family:'Dancing Script',cursive;
+    font-size:70px;
+    color:#c2185b;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.message-box{
+    background:white;
+    padding:40px;
+    border-radius:30px;
+    line-height:2;
+    font-size:22px;
+    color:#444;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* PAGE 3 */
+
+.page3{
+    background:linear-gradient(135deg,#fff0f6,#fff8fb);
+}
+
+.memory-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.memory{
+    background:white;
+    padding:30px;
+    min-height:220px;
+    border-radius:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:22px;
+    color:#d63384;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.memory:hover{
+    transform:translateY(-10px);
+}
+
+/* PAGE 4 */
+
+.page4{
+    background:linear-gradient(135deg,#ffdce8,#fff5fa);
+}
+
+.final-box{
+    background:white;
+    padding:45px;
+    border-radius:30px;
+    text-align:center;
+    font-size:24px;
+    line-height:2;
+    color:#444;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* HEART */
+
+.heart{
+    position:absolute;
+    color:#ff4d8d;
+    animation:up 5s linear infinite;
+}
+
+@keyframes up{
+    0%{ transform:translateY(0); opacity:1; }
+    100%{ transform:translateY(-800px); opacity:0; }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:12px;
+        flex-wrap:nowrap;
+        padding:14px 5px;
+    }
+
+    nav a{
+        margin:0;
+        font-size:14px;
+    }
+
+    .title{ font-size:55px; }
+    .heading{ font-size:42px; }
+    .subtitle{ font-size:17px; }
+
+    .message-box,
+    .final-box{
+        font-size:18px;
+        padding:25px;
+    }
+
+    .main-photo img{
+        width:220px;
+        height:220px;
+    }
+
+    .floating{
+        font-size:55px;
+        z-index:2;
+    }
+
+    .f1{ top:90px; left:5px; }
+    .f2{ bottom:120px; right:5px; }
+    .f3{ top:160px; right:10px; font-size:50px; }
+
+    .card{ padding:30px 20px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC (FOLDER SUPPORT) -->
+<audio id="bgMusic" autoplay loop>
+    <source src="C:\Users\Rizbaiye\Downloads\her.mp3" type="audio/mp3">
+</audio>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#message">Message</a>
+    <a href="#memory">Memories</a>
+    <a href="#wish">Wish</a>
+</nav>
+
+<section id="home" class="page1">
+    <div class="floating f1">🐱</div>
+    <div class="floating f2">🎈</div>
+    <div class="floating f3">🎂</div>
+
+    <div class="card">
+        <h1 class="title">Happy Birthday</h1>
+        <p class="subtitle">[ Ekhane Naam / Intro Likho ]</p>
+
+        <div class="main-photo">
+            <img src="E:\Images\tanisha.jpeg">
+        </div>
+    </div>
+</section>
+
+<section id="message" class="page2">
+    <div class="floating f1">🐱</div>
+    <div class="floating f2">🎈</div>
+    <div class="floating f3">🎂</div>
+
+    <div class="card">
+        <h1 class="heading">Special Message 💌</h1>
+        <div class="message-box">
+            [ Ekhane Main Birthday Message Likho ]
+        </div>
+    </div>
+</section>
+
+<section id="memory" class="page3">
+    <div class="floating f1">🐱</div>
+    <div class="floating f2">🎈</div>
+    <div class="floating f3">🎂</div>
+
+    <div class="card">
+        <h1 class="heading">Sweet Memories 🌸</h1>
+
+        <div class="memory-grid">
+            <div class="memory">Memory 1</div>
+            <div class="memory">Memory 2</div>
+            <div class="memory">Memory 3</div>
+            <div class="memory">Memory 4</div>
+        </div>
+    </div>
+</section>
+
+<section id="wish" class="page4">
+    <div class="floating f1">🐱</div>
+    <div class="floating f2">🎈</div>
+    <div class="floating f3">🎂</div>
+
+    <div class="card">
+        <h1 class="heading">Final Wish 🎀</h1>
+        <div class="final-box">
+            May your life always stay beautiful like flowers 🌸 <br>
+            Stay happy forever ❤️
+        </div>
+    </div>
+</section>
+
+<script>
+
+/* HEART ANIMATION */
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.bottom = "-20px";
+    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(()=> heart.remove(), 5000);
+}
+setInterval(createHeart,500);
+
+/* MUSIC PLAY ON CLICK (browser rule fix) */
+window.addEventListener("click", ()=>{
+    const music = document.getElementById("bgMusic");
+    music.play();
+});
+
+</script>
+
+</body>
+</html>
